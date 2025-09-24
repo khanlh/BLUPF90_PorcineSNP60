@@ -18,6 +18,8 @@ The dataset (**PorcineSNP60**) includes:
 
 **Note:** Traits t1–t5 are anonymized in the original paper. They are continuous quantitative traits with varying heritability, but the exact biological meaning is not disclosed.
 
+<img width="1873" height="835" alt="image" src="https://github.com/user-attachments/assets/c25ed0de-63b5-42b9-b911-9bddb1e5b06a" />
+
 ---
 
 ## Theory of Variance Component Estimation (VCE)
