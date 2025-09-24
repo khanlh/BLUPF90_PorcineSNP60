@@ -1,0 +1,33 @@
+DATAFILE
+../data/processed/phenotypes_with_mean.dat
+TRAITS
+2                    # phenotype
+FIELDS_PASSED TO OUTPUT
+
+WEIGHT(S)
+
+RESIDUAL_VARIANCE
+1.0
+EFFECT
+7 cross alpha        # fixed effect (contemporary group = 1)
+EFFECT
+6 cross alpha        #  animal effect (random)
+RANDOM
+diagonal 
+(CO)VARIANCES
+0.05  
+EFFECT
+1 cross alpha  
+RANDOM
+animal
+FILE
+../data/processed/pedigree.ped
+FILE_POS
+1 2 3
+PED_DEPTH
+3
+(CO)VARIANCES
+1.0
+           
+OPTION missing -9999
+OPTION remove_all_missing

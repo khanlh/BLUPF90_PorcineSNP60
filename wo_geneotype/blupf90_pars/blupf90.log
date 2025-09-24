@@ -1,0 +1,24 @@
+ BLUPF90+ ver. 2.60
+ In round         17 convergence =  0.383991023835E-10
+ delta convergence =  0.523315152157E-06
+-2logL =        9004.9573     : AIC =        9010.9573    
+Genetic variance(s) for effect  2       
+  0.19201E-02
+Genetic variance(s) for effect  3       
+  0.11189    
+Residual variance(s)
+   1.3466    
+inverse of AI matrix (Sampling Variance)
+  0.69328E-04 -0.18116E-04 -0.49283E-04
+ -0.18116E-04  0.16302E-02 -0.12727E-02
+ -0.49283E-04 -0.12727E-02  0.25331E-02
+Correlations from inverse of AI matrix
+   1.0000     -0.53888E-01 -0.11760    
+ -0.53888E-01   1.0000     -0.62629    
+ -0.11760     -0.62629       1.0000    
+SE for G
+  0.83263E-02
+SE for G
+  0.40376E-01
+SE for R
+  0.50330E-01

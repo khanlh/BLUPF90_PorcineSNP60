@@ -1,0 +1,290 @@
+
+aireml.par
+     BLUPF90+ ver. 2.60
+
+ Parameter file:             aireml.par
+ Data file:                  renf90.dat
+ Number of Traits             1
+ Number of Effects            3
+ Position of Observations      1
+ Position of Weights           0
+ Value of Missing Trait/Observation           0
+
+EFFECTS
+ #  type                position (2)        levels   [positions for nested]
+    1  cross-classified       2         1
+    2  cross-classified       3      2529
+    3  cross-classified       4      5337
+
+ Residual (co)variance Matrix
+  1.0000    
+
+ Random Effect(s)    2
+ Type of Random Effect:      diagonal
+ trait   effect    (CO)VARIANCES
+  1       2    0.5000E-01
+
+ Random Effect(s)    3
+ Type of Random Effect:      additive animal with unknown parent groups and inbreeding
+ Pedigree File:              renadd03.ped                                                                                                                                                                                                                                              
+ trait   effect    (CO)VARIANCES
+  1       3     1.000    
+
+ REMARKS
+  (1) Weight position 0 means no weights utilized
+  (2) Effect positions of 0 for some effects and traits means that such
+      effects are missing for specified traits
+ 
+
+ * The limited number of OpenMP threads = 4
+
+ * BLUPF90+ sparse operations version
+ 
+ * START JOB (BLUPF90): 09-24-2025  09h 53m 07s 536
+ 
+ *** Statistical method from OPTION VCE                 
+ * convergence criterion (default=1e-12):  1.0000000E-12
+ * missing observation (default=0):       -9999
+ * sparse package: YAMS
+ 
+ IJA4 version
+ Data record length =            4
+ # free parameters=           3
+ # parameters=           3
+ # random effects=           2
+ # elements for random effects=           2
+ # maximum (ntrait*random)**2=           1
+ # (co)variance matrices=           2
+hash matrix increased from            8192 to           16384 % filled:     0.8000
+hash matrix increased from           16384 to           32768 % filled:     0.8000
+
+Read 2804 records in 9.40 s,  13471 nonzeroes
+
+hash matrix increased from            8192 to           16384 % filled:     0.8000
+hash matrix increased from           16384 to           32768 % filled:     0.8000
+hash matrix increased from           32768 to           65536 % filled:     0.8000
+
+Read 5337 additive pedigrees
+
+finished peds (VCE) in 9.41 s,  27749 nonzeroes
+
+ rank=        7867
+
+ YAMS: Yet Another MME Solver  Version 1.1.8           
+--------------------------------------------------------------
+ Original MME:
+   No. of Equations                =          7867
+   No. of Nonzeros                 =         27749
+   IA byte type                    =             4
+   Ordering Method                 =           AMD
+   Factor Type                     =           LDL
+   Algorithm for Factorization     =         SN LL
+   Algorithm for Inversion         =         INVMF
+ Supernodes (SNs):
+   No. of SNs.                     =          7375
+   No. of Cols. in the Last SN.    =           195
+   Frequent No. of Cols.           =             1
+   Its Count                       =          7209
+   Its Ratio (%)                   =      97.74915
+   Threshold of Split              =    2147483647
+ Factor (L):
+   User-defined Constraint         =             0
+   Rank                            =          7867
+   No. of Constraints              =             0
+   Panel Size                      =           256
+   Tolerances for Kachman mod.     =     1.000E-10     1.000E-10
+   Detection of Panel Size (1:YES) =             0
+ Memory:
+   No. of Effective Entries in L   =         78720
+   No. of Allocated Entries in L   =         99132
+   Storage for L              (MB) =           0.8
+   Storage for Integer Arrays (MB) =           0.3
+   Temp. Mem. for FACT.       (MB) =           0.1
+   Temp. Mem. for INV.        (MB) =           0.3
+ CPU & System Time in the last call:
+   Ordering                  (sec) =           0.1           0.0
+   Symbolic Fact.            (sec) =           0.0           0.0
+   Numerical Fact.           (sec) =           0.1           0.0
+   Sparse Inversion          (sec) =           0.1           0.0
+   Solution                  (sec) =           0.0           0.0
+
+ -2logL =    9149.37292842241       : AIC =    9155.37292842241     
+  In round            1  convergence=   7.73752231089259     
+  delta convergence=  0.296107455166836     
+ new R
+   1.1449    
+ new G
+  0.44953E-01
+ new G
+  0.26162    
+ * START ITERATION: 09-24-2025  09h 53m 08s 223
+ -2logL =    9021.76853268475       : AIC =    9027.76853268475     
+  In round            2  convergence=   1.32855043301376     
+  delta convergence=  0.408377889815942     
+ new R
+   1.7179    
+ new G
+  0.10000E-11
+ new G
+  0.86826E-01
+ -2logL =    9066.57081091431       : AIC =    9072.57081091431     
+  In round            3  convergence=  6.719758965352364E-002
+  delta convergence=  0.166319998589695     
+ new R
+   1.2538    
+ new G
+  0.51016E-02
+ new G
+  0.11666    
+ -2logL =    9010.59161044182       : AIC =    9016.59161044182     
+  In round            4  convergence=  5.343836209329832E-003
+  delta convergence=  3.374625745470092E-002
+ new R
+   1.3441    
+ new G
+  0.10000E-11
+ new G
+  0.11322    
+ -2logL =    9005.06977515313       : AIC =    9011.06977515313     
+  In round            5  convergence=  9.551171358587416E-004
+  delta convergence=  1.924271425097257E-003
+ new R
+   1.3453    
+ new G
+  0.31430E-02
+ new G
+  0.11178    
+ -2logL =    9004.98497171739       : AIC =    9010.98497171739     
+  In round            6  convergence=  3.828407506154656E-004
+  delta convergence=  1.485170392093336E-003
+ new R
+   1.3476    
+ new G
+  0.95571E-03
+ new G
+  0.11178    
+ -2logL =    9004.98034903034       : AIC =    9010.98034903034     
+  In round            7  convergence=  1.226283645452135E-004
+  delta convergence=  9.296309011872351E-004
+ new R
+   1.3462    
+ new G
+  0.21766E-02
+ new G
+  0.11200    
+ -2logL =    9004.95869126972       : AIC =    9010.95869126972     
+  In round            8  convergence=  1.410865631974283E-005
+  delta convergence=  3.507235589384759E-004
+ new R
+   1.3467    
+ new G
+  0.17770E-02
+ new G
+  0.11187    
+ -2logL =    9004.95774049095       : AIC =    9010.95774049095     
+  In round            9  convergence=  3.523971983304385E-006
+  delta convergence=  1.541937046736523E-004
+ new R
+   1.3465    
+ new G
+  0.19850E-02
+ new G
+  0.11190    
+ -2logL =    9004.95738212774       : AIC =    9010.95738212774     
+  In round           10  convergence=  8.003188450599973E-007
+  delta convergence=  7.652763218375754E-005
+ new R
+   1.3466    
+ new G
+  0.18868E-02
+ new G
+  0.11188    
+ -2logL =    9004.95731447266       : AIC =    9010.95731447266     
+  In round           11  convergence=  1.974239391304158E-007
+  delta convergence=  3.732649669221045E-005
+ new R
+   1.3466    
+ new G
+  0.19358E-02
+ new G
+  0.11189    
+ -2logL =    9004.95729622464       : AIC =    9010.95729622464     
+  In round           12  convergence=  4.696680347268169E-008
+  delta convergence=  1.835175269099248E-005
+ new R
+   1.3466    
+ new G
+  0.19119E-02
+ new G
+  0.11189    
+ -2logL =    9004.95729206442       : AIC =    9010.95729206442     
+  In round           13  convergence=  1.139216271373308E-008
+  delta convergence=  9.003108201293101E-006
+ new R
+   1.3466    
+ new G
+  0.19237E-02
+ new G
+  0.11189    
+ -2logL =    9004.95729103810       : AIC =    9010.95729103810     
+  In round           14  convergence=  2.737756761568978E-009
+  delta convergence=  4.421820852631555E-006
+ new R
+   1.3466    
+ new G
+  0.19179E-02
+ new G
+  0.11189    
+ -2logL =    9004.95729079154       : AIC =    9010.95729079154     
+  In round           15  convergence=  6.609926593905814E-010
+  delta convergence=  2.170707843507493E-006
+ new R
+   1.3466    
+ new G
+  0.19208E-02
+ new G
+  0.11189    
+ -2logL =    9004.95729073105       : AIC =    9010.95729073105     
+  In round           16  convergence=  1.592270738724901E-010
+  delta convergence=  1.065877919608849E-006
+ new R
+   1.3466    
+ new G
+  0.19194E-02
+ new G
+  0.11189    
+ -2logL =    9004.95729071626       : AIC =    9010.95729071626     
+  In round           17  convergence=  3.839910238353807E-011
+  delta convergence=  5.233151521570225E-007
+ new R
+   1.3466    
+ new G
+  0.19201E-02
+ new G
+  0.11189    
+ * END ITERATION: 09-24-2025  09h 53m 09s 021
+ solutions stored in file: "solutions"
+
+Final Estimates
+ Genetic variance(s) for effect  2       
+  0.19201E-02
+ Genetic variance(s) for effect  3       
+  0.11189    
+ Residual variance(s)
+   1.3466    
+ inverse of AI matrix (Sampling Variance)
+  0.69328E-04 -0.18116E-04 -0.49283E-04
+ -0.18116E-04  0.16302E-02 -0.12727E-02
+ -0.49283E-04 -0.12727E-02  0.25331E-02
+ Correlations from inverse of AI matrix
+   1.0000     -0.53888E-01 -0.11760    
+ -0.53888E-01   1.0000     -0.62629    
+ -0.11760     -0.62629       1.0000    
+ SE for G
+  0.83263E-02
+ SE for G
+  0.40376E-01
+ SE for R
+  0.50330E-01
+ *** Statistical Method: VCE                 
+ * FINISHED (BLUPF90): 09-24-2025  09h 53m 09s 786
