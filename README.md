@@ -65,12 +65,30 @@ with \( \sigma^2_E \) being the residual (environmental + unexplained) variance.
 
 ---
 
-### Example Calculation
+### Example: Calculating Heritability from VCE Output
 
-Suppose the `airemlf90` output contains:
+From the `airemlf90` output:
 
-```plaintext
-Additive genetic variance: 0.25
-Residual variance: 0.15
-Total phenotypic variance: 0.40
+- Additive genetic variance: 0.25  
+- Residual variance: 0.15  
+- Total phenotypic variance: 0.40  
+
+Then:
+
+$$
+h^2 = \frac{\sigma^2_G}{\sigma^2_P} = \frac{0.25}{0.40} = 0.625
+$$
+
+
+---
+
+## Running `airemlf90` and `blupf90`
+
+/mnt/f/BLUPF90/renumf90 renum.par
+
+
+/mnt/f/BLUPF90/blupf90 aireml.par
+
+
+/mnt/f/BLUPF90/blupf90 blupf90.par
 
