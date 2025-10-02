@@ -1,0 +1,561 @@
+
+aireml.par
+     BLUPF90+ ver. 2.60
+
+ Parameter file:             aireml.par
+ Data file:                  renf90.dat
+ Number of Traits             1
+ Number of Effects            3
+ Position of Observations      1
+ Position of Weights           0
+ Value of Missing Trait/Observation           0
+
+EFFECTS
+ #  type                position (2)        levels   [positions for nested]
+    1  cross-classified       2         1
+    2  cross-classified       3      2529
+    3  cross-classified       4      6443
+
+ Residual (co)variance Matrix
+  1.0000    
+
+ Random Effect(s)    2
+ Type of Random Effect:      diagonal
+ trait   effect    (CO)VARIANCES
+  1       2    0.5000E-01
+
+ Random Effect(s)    3
+ Type of Random Effect:      additive animal with unknown parent groups and inbreeding
+ Pedigree File:              renadd03.ped                                                                                                                                                                                                                                              
+ trait   effect    (CO)VARIANCES
+  1       3     1.000    
+
+ REMARKS
+  (1) Weight position 0 means no weights utilized
+  (2) Effect positions of 0 for some effects and traits means that such
+      effects are missing for specified traits
+ 
+
+ * The limited number of OpenMP threads = 4
+
+ * BLUPF90+ sparse operations version
+ 
+ * START JOB (BLUPF90): 10-02-2025  16h 14m 57s 750
+ 
+ *** Statistical method from OPTION VCE                 
+ * convergence criterion (default=1e-12):  1.0000000E-12
+ * missing observation (default=0):       -9999
+ * sparse package: YAMS
+ 
+
+ Options read from parameter file for genomic
+ * SNP format: BLUPF90 standard (text)
+ * SNP file: ../data/processed/genotypes_fixed_corrected.txt
+ * SNP Xref file: ../data/processed/genotypes_fixed_corrected.txt_XrefID
+ * use YAMS package for sparse computation (default=.false.)
+ IJA4 version
+ Data record length =            4
+ # free parameters=           3
+ # parameters=           3
+ # random effects=           2
+ # elements for random effects=           2
+ # maximum (ntrait*random)**2=           1
+ # (co)variance matrices=           2
+hash matrix increased from            8192 to           16384 % filled:     0.8000
+hash matrix increased from           16384 to           32768 % filled:     0.8000
+
+Read 2804 records in 10.87 s,  13471 nonzeroes
+
+hash matrix increased from            8192 to           16384 % filled:     0.8000
+hash matrix increased from           16384 to           32768 % filled:     0.8000
+hash matrix increased from           32768 to           65536 % filled:     0.8000
+
+Read 6443 additive pedigrees
+ 
+ *--------------------------------------------------------------*
+ *                 Genomic Library: Dist Version 1.319          *
+ *                                                              *
+ *             Optimized OpenMP Version -   4 threads            *
+ *                                                              *
+ *  Modified relationship matrix (H) created for effect:   3    *
+ *--------------------------------------------------------------*
+ 
+ Read 6443 animals from pedigree file: "renadd03.ped"
+ Number of Genotyped Animals: 3534
+
+ Creating A22 
+    Extracting subset of: 6443 pedigrees from: 6443 elapsed time:     0.0007
+    Calculating A22 Matrix by Colleau OpenMP...elapsed time: .0440
+    Numbers of threads=4 4
+
+ Reading SNP file
+    Column position in file for the first marker: 6
+    Format to read SNP file: (5x,400000i1)                                     
+    Number of SNPs: 52843
+    Format: integer genotypes (0 to 5) to double-precision array
+    Number of Genotyped animals: 3534
+    Reading SNP file elapsed time: 3.10
+ 
+ Statistics of alleles frequencies in the current population
+    N:          52843
+    Mean:       0.514
+    Min:        0.001
+    Max:        0.999
+    Var:        0.089
+ 
+ Quality Control - SNPs with Call Rate < callrate ( 0.90) will removed: 0
+ 
+ Quality Control - SNPs with MAF < minfreq ( 0.05) will removed: 7439
+ 
+ Quality Control - Monomorphic SNPs will be removed: 0
+
+ Quality Control - Removed Animals with Call rate < callrate ( 0.90): 0
+
+ Quality Control - Check Parent-Progeny Mendelian conflicts
+
+    Total animals: 6443 - Genotyped animals: 3534 - Effective: 3534
+
+    Number of pairs Individual - Sire: 2089
+    Number of pairs Individual - Dam: 1429
+    Number of trios Individual - Sire - Dam: 1022
+
+    No sex Chromosome information is available !!
+    QC for parent-progeny conflicts, HWE or heritability of gene content, could eliminate SNPs in sex Chr
+    Provide map information and sex Chr to perform QC using autosomes
+
+ Checking SNPs for Mendelian conflicts
+
+    Total number of effective SNP: 45404
+    Total number of parent-progeny evaluations: 3518
+    Number of SNPs with Mendelian conflicts: 0
+
+ Checking Animals for Mendelian conflicts
+
+    Total number of effective SNP for checks on Animals: 45404
+
+    Number of Parent-Progeny Mendelian Conflicts: 0
+
+ Number of effective SNPs (after QC): 45404
+
+ Number of effective Individuals (after QC): 3534
+ 
+ Statistics of alleles frequencies in the current population after
+ Quality Control (MAF, monomorphic, call rate, HWE, Mendelian conflicts)
+    N:          45404
+    Mean:       0.508
+    Min:        0.050
+    Max:        0.950
+    Var:        0.066
+
+ Genotypes missings : 26289426
+
+ # genotypes : 3534
+
+ # genotypes animals : 52843
+
+ Genotypes missings (%): 14.078
+
+ Genotypes missings after cleannig (%):  0.000
+
+ Genotypes missings : 0
+
+ # genotypes : 3534
+
+ # genotypes animals : 45404
+
+ Calculating G Matrix 
+    Dgemm MKL #threads=     4    4 Elapsed omp_get_time:     5.9100
+ 
+ Scale by Sum(2pq). Average:   16719.8835182297     
+
+ Detecting samples with similar genotypes
+    elapsed time=     0.0
+ Tuning G prior to blending with A22
+
+ Tuning: Scale G matrix according to A22 -  Method: 2
+    Diagonal A:    1.017    Offdiagonal A:    0.021    All A:    0.021    Difference:   0.996
+    Diagonal G:    1.033    Offdiagonal G:   -0.000    All G:    0.000    Difference:   1.033
+    Diff G Diag - G OffDiag:    1.033    (da-oa)/(dg-og):    0.964
+    Diff A OffDiag - G OffDiag:    0.021
+    Diff A all - G all:    0.021
+    a + G*b; a:  0.021       b:  0.964
+ Method to select individuals: 1
+ Number of individual selected: 3534
+ 
+ Blend G as alpha*G + beta*A22: (alpha,beta)     0.950     0.050
+
+ Frequency - Diagonal of G
+    N:        3534
+    Mean:        1.017
+    Min:         0.843
+    Max:         1.579
+    Range:       0.037
+    Class:     20
+ 
+  #Class       Class   Count
+       1  0.8432          38
+       2  0.8800         306
+       3  0.9167         716
+       4  0.9535         796
+       5  0.9903         481
+       6   1.027         256
+       7   1.064         147
+       8   1.101         217
+       9   1.138         233
+      10   1.174         201
+      11   1.211          92
+      12   1.248          43
+      13   1.285           5
+      14   1.321           1
+      15   1.358           1
+      16   1.395           0
+      17   1.432           0
+      18   1.469           0
+      19   1.505           0
+      20   1.542           1
+      21   1.579           0
+ 
+
+ Check for diagonal of genomic relationship matrix
+
+
+ Check for diagonal of genomic relationship matrix, genotypes not removed: 0
+
+ ------------------------------
+  Final Pedigree-Based Matrix 
+ ------------------------------
+ 
+ Statistic of Rel. Matrix A22
+                                N      Mean       Min       Max       Var
+     Diagonal                3534     1.017     1.000     1.259     0.001
+     Off-diagonal        12485622     0.021     0.000     0.723     0.002
+ 
+
+ ----------------------
+  Final Genomic Matrix 
+ ----------------------
+ 
+ Statistic of Genomic Matrix
+                                N      Mean       Min       Max       Var
+     Diagonal                3534     1.017     0.843     1.579     0.009
+     Off-diagonal        12485622     0.021    -0.179     0.864     0.006
+ 
+
+ Correlation of Genomic Inbreeding and Pedigree Inbreeding
+     Correlation:    -0.0097
+ 
+ Diagonal elements
+    Estimating Regression Coefficients G = b0 11' + b1 A + e
+    Regression coefficients b0 b1 =      1.052    -0.035
+
+    Correlation diagonal elements G & A    -0.010
+ 
+ All elements - Diagonal / Off-Diagonal
+    Estimating Regression Coefficients G = b0 11' + b1 A + e
+    Regression coefficients b0 b1 =     -0.001     1.061
+
+    Correlation all elements G & A     0.602
+ 
+ Off-Diagonal
+    Using 3633816 elements from A22 >= .02000
+
+    Estimating Regression Coefficients G = b0 11' + b1 A + e
+    Regression coefficients b0 b1 =      0.010     0.958
+
+    Correlation Off-Diagonal elements G & A     0.662
+ 
+
+ Creating A22-inverse 
+    Inverse LAPACK MKL dpotrf/i  #threads=    4    4 Elapsed omp_get_time:     0.2411
+
+ ----------------------
+  Final A22 Inv Matrix 
+ ----------------------
+ 
+ Statistic of Inv. Rel. Matrix A22
+                                N      Mean       Min       Max       Var
+     Diagonal                3534     2.163     1.000    28.372     2.087
+     Off-diagonal        12485622    -0.001    -1.162     3.658     0.001
+ 
+ 
+ Creating G-inverse 
+    Inverse LAPACK MKL dpotrf/i  #threads=    4    4 Elapsed omp_get_time:     0.2016
+
+ --------------------------
+  Final Genomic Inv Matrix 
+ --------------------------
+ 
+ Statistic of Inv. Genomic Matrix
+                                N      Mean       Min       Max       Var
+     Diagonal                3534     8.376     1.216    84.921    29.539
+     Off-diagonal        12485622    -0.002    -7.474    12.208     0.022
+ 
+
+ Check for diagonal of Inverse Genomic - Inverse of pedigree relationship matrix
+
+
+ ------------------------------
+  Final G Inv - A22 Inv Matrix 
+ ------------------------------
+ 
+ Statistic of Inv. Genomic - A22 Matrix
+                                N      Mean       Min       Max       Var
+     Diagonal                3534     6.212     0.216    60.718    16.855
+     Off-diagonal        12485622    -0.002    -6.388     9.053     0.018
+ 
+
+*--------------------------------------------------*
+* Setup Genomic Done !!!, elapsed time:     29.495 *
+*--------------------------------------------------*
+
+ wGimA22i   1.00000000000000     
+hash matrix increased from           32768 to           65536 % filled:     0.8000
+hash matrix increased from           65536 to          131072 % filled:     0.8000
+hash matrix increased from          131072 to          262144 % filled:     0.8000
+hash matrix increased from          262144 to          524288 % filled:     0.8000
+hash matrix increased from          524288 to         1048576 % filled:     0.8000
+hash matrix increased from         1048576 to         2097152 % filled:     0.8000
+hash matrix increased from         2097152 to         4194304 % filled:     0.8000
+hash matrix increased from         4194304 to         8388608 % filled:     0.8000
+hash matrix increased from           65536 to          131072 % filled:     0.8000
+hash matrix increased from          131072 to          262144 % filled:     0.8000
+hash matrix increased from          262144 to          524288 % filled:     0.8000
+hash matrix increased from          524288 to         1048576 % filled:     0.8000
+hash matrix increased from         1048576 to         2097152 % filled:     0.8000
+hash matrix increased from         2097152 to         4194304 % filled:     0.8000
+hash matrix increased from         4194304 to         8388608 % filled:     0.8000
+
+finished peds (VCE) in 53.84 s,  6269755 nonzeroes
+
+ 
+ *** Advise: running BLUPF90+ --dense might speed up computations
+ 
+ rank=        8973
+
+ YAMS: Yet Another MME Solver  Version 1.1.8           
+--------------------------------------------------------------
+ Original MME:
+   No. of Equations                =          8973
+   No. of Nonzeros                 =       6269755
+   IA byte type                    =             4
+   Ordering Method                 =           AMD
+   Factor Type                     =           LDL
+   Algorithm for Factorization     =         SN LL
+   Algorithm for Inversion         =         INVMF
+ Supernodes (SNs):
+   No. of SNs.                     =          5299
+   No. of Cols. in the Last SN.    =          3534
+   Frequent No. of Cols.           =             1
+   Its Count                       =          5160
+   Its Ratio (%)                   =      97.37686
+   Threshold of Split              =    2147483647
+ Factor (L):
+   User-defined Constraint         =             0
+   Rank                            =          8973
+   No. of Constraints              =             0
+   Panel Size                      =           256
+   Tolerances for Kachman mod.     =     1.000E-10     1.000E-10
+   Detection of Panel Size (1:YES) =             0
+ Memory:
+   No. of Effective Entries in L   =       6315983
+   No. of Allocated Entries in L   =       6951063
+   Storage for L              (MB) =          53.0
+   Storage for Integer Arrays (MB) =           0.4
+   Temp. Mem. for FACT.       (MB) =           0.0
+   Temp. Mem. for INV.        (MB) =          60.0
+ CPU & System Time in the last call:
+   Ordering                  (sec) =           0.7           0.2
+   Symbolic Fact.            (sec) =           0.9           0.3
+   Numerical Fact.           (sec) =           0.4           0.2
+   Sparse Inversion          (sec) =           1.0           0.2
+   Solution                  (sec) =           0.0           0.0
+
+ -2logL =    9255.41625855577       : AIC =    9261.41625855577     
+  In round            1  convergence=   20.9882010141115     
+  delta convergence=  0.368649271179031     
+ new R
+   1.2759    
+ new G
+  0.45599E-01
+ new G
+  0.17436    
+ * START ITERATION: 10-02-2025  16h 15m 35s 195
+ -2logL =    9033.65204205533       : AIC =    9039.65204205533     
+  In round            2  convergence=  4.450411199166460E-002
+  delta convergence=  2.892106876941518E-002
+ new R
+   1.3270    
+ new G
+  0.41055E-01
+ new G
+  0.14325    
+ -2logL =    9026.21615834421       : AIC =    9032.21615834421     
+  In round            3  convergence=   1.25019160752135     
+  delta convergence=  0.384054922265819     
+ new R
+   1.8257    
+ new G
+  0.10000E-11
+ new G
+  0.12703E-01
+ -2logL =    9085.73692189003       : AIC =    9091.73692189003     
+  In round            4  convergence=  0.503408375195992     
+  delta convergence=  0.185353059823313     
+ new R
+   1.3051    
+ new G
+  0.51034E-02
+ new G
+  0.42996E-01
+ -2logL =    9019.09096880432       : AIC =    9025.09096880432     
+  In round            5  convergence=  3.400359450399475E-002
+  delta convergence=  3.726608369621630E-002
+ new R
+   1.4041    
+ new G
+  0.10000E-11
+ new G
+  0.49056E-01
+ -2logL =    9010.82206075874       : AIC =    9016.82206075874     
+  In round            6  convergence=  4.013250162240058E-003
+  delta convergence=  2.164419821854159E-003
+ new R
+   1.4066    
+ new G
+  0.30465E-02
+ new G
+  0.49928E-01
+ -2logL =    9010.70334510315       : AIC =    9016.70334510315     
+  In round            7  convergence=  1.565511326786730E-003
+  delta convergence=  1.362875559520371E-003
+ new R
+   1.4087    
+ new G
+  0.10691E-02
+ new G
+  0.49993E-01
+ -2logL =    9010.69759865825       : AIC =    9016.69759865825     
+  In round            8  convergence=  4.970480796993715E-004
+  delta convergence=  8.565622970130903E-004
+ new R
+   1.4075    
+ new G
+  0.21641E-02
+ new G
+  0.50233E-01
+ -2logL =    9010.68083156530       : AIC =    9016.68083156530     
+  In round            9  convergence=  6.769328643720335E-005
+  delta convergence=  3.505580784902153E-004
+ new R
+   1.4080    
+ new G
+  0.17822E-02
+ new G
+  0.50078E-01
+ -2logL =    9010.67990553632       : AIC =    9016.67990553632     
+  In round           10  convergence=  1.677368282228824E-005
+  delta convergence=  1.577571341204837E-004
+ new R
+   1.4077    
+ new G
+  0.19828E-02
+ new G
+  0.50123E-01
+ -2logL =    9010.67956274775       : AIC =    9016.67956274775     
+  In round           11  convergence=  3.837182616793201E-006
+  delta convergence=  7.742732997740677E-005
+ new R
+   1.4079    
+ new G
+  0.18878E-02
+ new G
+  0.50098E-01
+ -2logL =    9010.67949712980       : AIC =    9016.67949712980     
+  In round           12  convergence=  9.515104459793120E-007
+  delta convergence=  3.803437656163952E-005
+ new R
+   1.4078    
+ new G
+  0.19353E-02
+ new G
+  0.50109E-01
+ -2logL =    9010.67947936677       : AIC =    9016.67947936677     
+  In round           13  convergence=  2.279229451149940E-007
+  delta convergence=  1.872891693316865E-005
+ new R
+   1.4078    
+ new G
+  0.19121E-02
+ new G
+  0.50103E-01
+ -2logL =    9010.67947529317       : AIC =    9016.67947529317     
+  In round           14  convergence=  5.561078944844160E-008
+  delta convergence=  9.222457605154487E-006
+ new R
+   1.4078    
+ new G
+  0.19236E-02
+ new G
+  0.50106E-01
+ -2logL =    9010.67947427411       : AIC =    9016.67947427411     
+  In round           15  convergence=  1.345015405780458E-008
+  delta convergence=  4.542377643808782E-006
+ new R
+   1.4078    
+ new G
+  0.19179E-02
+ new G
+  0.50105E-01
+ -2logL =    9010.67947403002       : AIC =    9016.67947403002     
+  In round           16  convergence=  3.267397891139915E-009
+  delta convergence=  2.237156354552876E-006
+ new R
+   1.4078    
+ new G
+  0.19207E-02
+ new G
+  0.50105E-01
+ -2logL =    9010.67947397737       : AIC =    9016.67947397737     
+  In round           17  convergence=  7.920378092284800E-010
+  delta convergence=  1.101862494069902E-006
+ new R
+   1.4078    
+ new G
+  0.19193E-02
+ new G
+  0.50105E-01
+ -2logL =    9010.67947395679       : AIC =    9016.67947395679     
+  In round           18  convergence=  1.921985453697604E-010
+  delta convergence=  5.426889617410241E-007
+ new R
+   1.4078    
+ new G
+  0.19200E-02
+ new G
+  0.50105E-01
+ * END ITERATION: 10-02-2025  16h 16m 32s 040
+ solutions stored in file: "solutions"
+
+Final Estimates
+ Genetic variance(s) for effect  2       
+  0.19200E-02
+ Genetic variance(s) for effect  3       
+  0.50105E-01
+ Residual variance(s)
+   1.4078    
+ inverse of AI matrix (Sampling Variance)
+  0.68690E-04 -0.19565E-04 -0.48417E-04
+ -0.19565E-04  0.55131E-03 -0.37747E-03
+ -0.48417E-04 -0.37747E-03  0.18106E-02
+ Correlations from inverse of AI matrix
+   1.0000     -0.10054     -0.13729    
+ -0.10054       1.0000     -0.37782    
+ -0.13729     -0.37782       1.0000    
+ SE for G
+  0.82879E-02
+ SE for G
+  0.23480E-01
+ SE for R
+  0.42551E-01
+ *** Statistical Method: VCE                 
+ * FINISHED (BLUPF90): 10-02-2025  16h 16m 33s 336

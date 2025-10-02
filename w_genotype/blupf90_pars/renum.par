@@ -1,0 +1,47 @@
+### format SNP_FILE
+### sed 's/\.00//g' ../data/processed/genotypes.txt > ../data/processed/genotypes_clean.txt ###remove .00
+### awk 'NR==1 {print; next} {for (i=2; i<=NF; i++) if ($i !~ /^[0-2]$/) $i=1}1' ../data/processed/genotypes_clean.txt > ../data/processed/genotypes_fixed.txt ## chance error data to 1
+### awk 'NR>1 {id=$1; gsub(/ /,"",id); printf "%-4s ",id; for(i=2;i<=NF;i++) printf "%s",$i; printf "\n"}' ../data/processed/genotypes_fixed.txt > ../data/processed/genotypes_fixed_corrected_v2.txt
+
+
+DATAFILE
+../data/processed/phenotypes_with_mean.dat
+TRAITS
+2                    # phenotype
+FIELDS_PASSED TO OUTPUT
+
+WEIGHT(S)
+
+RESIDUAL_VARIANCE
+1.0
+EFFECT
+7 cross alpha        # fixed effect (contemporary group = 1)
+EFFECT
+6 cross alpha        #  animal effect (random)
+RANDOM
+diagonal 
+(CO)VARIANCES
+0.05  
+EFFECT
+1 cross alpha  
+RANDOM
+animal
+FILE
+../data/processed/pedigree.ped
+FILE_POS
+1 2 3
+SNP_FILE
+../data/processed/genotypes_fixed_corrected.txt
+PED_DEPTH
+3
+(CO)VARIANCES
+1.0
+           
+OPTION missing -9999
+OPTION remove_all_missing
+OPTION alpha_size 80
+
+### format SNP_FILE
+### sed 's/\.00//g' ../data/processed/genotypes.txt > ../data/processed/genotypes_clean.txt ###remove .00
+### awk 'NR==1 {print; next} {for (i=2; i<=NF; i++) if ($i !~ /^[0-2]$/) $i=1}1' ../data/processed/genotypes_clean.txt > ../data/processed/genotypes_fixed.txt ## chance error data to 1
+### awk 'NR>1 {id=$1; gsub(/ /,"",id); printf "%-4s ",id; for(i=2;i<=NF;i++) printf "%s",$i; printf "\n"}' ../data/processed/genotypes_fixed.txt > ../data/processed/genotypes_fixed_corrected_v2.txt
