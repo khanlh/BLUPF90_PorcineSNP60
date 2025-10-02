@@ -94,3 +94,5 @@ $$
 
 /mnt/f/BLUPF90/blupf90 blupf90.par
 
+Note: commandline nohup /mnt/f/BLUPF90/blupf90+ blupf90.par > blupf90.out & is better and you can tracking the .log file
+
